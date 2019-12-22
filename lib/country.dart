@@ -2301,6 +2301,12 @@ class Country {
       (item) => item.isoCode == isoCode,
     );
   }
+  
+  static findByName(String cName) {
+    return ALL.singleWhere(
+      (item) => item.name == cName,
+    );
+  }
 
   /// Creates a copy with modified values
   Country copyWith({
